@@ -1,3 +1,5 @@
+@use './mixins.scss' as m;
+
 * {
     font-family: 'Spartan', sans-serif;
 }
@@ -7,4 +9,24 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     max-height: 100vh;  
+}
+
+h1 {
+    @include m.font($size: 32px, $weight: 700, $height: 36px, $spacing: -1);
+}
+
+h2 {
+    @include m.font($size: 20px, $weight: 700, $height: 22px, $spacing: -0.63);
+} 
+
+h3 {
+    @include m.font($size: 16px, $weight: 700, $height: 24px, $spacing: -0.8);
+}
+
+.body__typography {
+    @include m.font($size: 12px, $weight: 400, $height: 15px, $spacing: -0.25);
+}
+
+.body__typography--small {
+    @include m.font($size: 11px, $weight: 400, $height: 18px, $spacing: -0.23);
 }
