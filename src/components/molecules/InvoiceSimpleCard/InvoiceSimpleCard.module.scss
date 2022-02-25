@@ -1,0 +1,51 @@
+@use "../../../styles/fonts.scss" as f;
+@use "../../../styles/constants.scss" as *;
+
+.invoiceItem {
+    display: grid;
+    grid-template-rows:  max-content 1fr;
+    justify-content: space-between;
+    grid-template-areas: 
+        "id name"
+        "due status"
+        "total status";
+
+    &:hover {
+        border: 1px solid $color-purble-primary;
+        cursor: pointer;
+    }
+}
+
+.id {
+    grid-area: id;
+    margin-bottom: 24px;
+
+    span {
+        color: #7E88C3;
+    }
+}
+
+.paymentDue {
+    @include f.body__typography;
+    grid-area: due;
+    color: #7E88C3;
+}
+
+.clientName {
+    @include f.body__typography;
+    grid-area: name;
+    color: #858BB2;
+    text-align: right;
+}
+
+.invoiceTotal {
+    grid-area: total;
+}
+
+.invoiceStatusLabel {
+    grid-area: status;
+}   
+
+.rightArrowIcon {
+    display: none;
+}
