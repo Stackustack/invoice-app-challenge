@@ -31,3 +31,11 @@
         letter-spacing: $spacing;
     }
 }
+
+@mixin buttonColors($neutral, $active ) {
+    background-color: $neutral;
+
+    &:hover {
+        background-color: $active;
+    };
+}

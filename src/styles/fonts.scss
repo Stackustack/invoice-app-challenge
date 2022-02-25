@@ -1,1 +1,31 @@
+@use './mixins.scss' as m;
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+* {
+    font-family: 'Spartan', sans-serif;
+}
+
+// they screwed up the rest of colors design system... ehh...
+h1 {
+    @include m.font($size: 32px, $weight: 700, $height: 36px, $spacing: -1px);
+}
+
+h2 {
+    @include m.font($size: 20px, $weight: 700, $height: 22px, $spacing: -0.63px);
+} 
+
+h3 {
+    @include m.font($size: 16px, $weight: 700, $height: 24px, $spacing: -0.8px);
+}
+
+h4 {
+    @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+}
+
+@mixin body__typography {
+    @include m.font($size: 12px, $weight: 400, $height: 15px, $spacing: -0.25px);
+}
+
+.body__typography--small {
+    @include m.font($size: 11px, $weight: 400, $height: 18px, $spacing: -0.23px);
+}
