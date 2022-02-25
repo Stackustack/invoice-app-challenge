@@ -1,0 +1,22 @@
+@use '/src/styles/mixins.scss' as m;
+@use '/src/styles/constants.scss' as *;
+
+.newInvoiceButton {
+    @include m.flex($direction: row, $align: center, $justify: flex-start);
+    @include m.buttonColors($neutral: $color-purble-primary, $active: $color-purple-400);
+    gap: 16px;
+    border: none;
+    color: white;
+    padding-left: 8px;
+}
+
+.circle {
+    @include m.flex($direction: row, $align: center, $justify: center);
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+
+
+
