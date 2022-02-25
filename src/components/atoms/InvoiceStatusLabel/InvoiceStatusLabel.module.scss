@@ -1,0 +1,49 @@
+@use '/src/styles/mixins.scss' as m;
+
+.invoiceStatusLabel {
+    @include m.flex($direction: row, $align: center, $justify: center);
+    gap: 8px;
+    min-width: 104px;
+    min-height: 40px;
+    border-radius: 6px;
+    padding: 0 20px;
+
+    h4 {
+        text-transform: capitalize;
+    }   
+}
+
+
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.paid {
+    color: #33D69F;
+    background-color: #33D69F1A;;
+
+    .dot {
+        background-color: #33D69F;
+    }
+}
+
+.pending {
+    color: #FF8F00;
+    background-color: #FF8F001A;;
+
+    .dot {
+        background-color: #FF8F00;
+    }
+}
+
+.draft {
+    color: #373B53;
+    background-color: #373B531A;;
+
+    .dot {
+        background-color: #373B53;
+    }
+}
