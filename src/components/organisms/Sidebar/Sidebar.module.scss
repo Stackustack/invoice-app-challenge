@@ -1,0 +1,51 @@
+@use "../../../styles/mixins.scss" as m;
+
+.sidebar {
+    @include m.flex($direction: row, $align: center, $justify: center);
+    background-color: #373B53;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.divider {
+    width: 1px;
+    background-color: #494E6E;
+    align-self: stretch;
+}
+
+.avatarImage {
+    $mobileSize: 32px;
+    width: $mobileSize;
+    height: $mobileSize;
+    border-radius: $mobileSize/2;
+}
+
+@media (min-width: 992px) {
+    
+    .sidebar {
+        @include m.flex($direction: column);
+        height: 100vh;
+        $sidebardWidth: 103px;
+        width: $sidebardWidth;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .logo {
+        margin-bottom: auto;
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+@use "../../../styles/mixins.scss" as m;
+
+$logoRadius: 20px;
+
+$logoSizeSmall: 72px; // Mobile
+$logoSizeMid: 80px; // Tablet
+$logoSizeBig: 103px; // Desktop
+
+.logoWrapper {
+    @include m.flex($direction: column, $align: center, $justify: center);
+    width: $logoSizeSmall;
+    height: $logoSizeSmall;
+    background-color: #7C5DFA;
+    border-top-right-radius: $logoRadius;
+    border-bottom-right-radius: $logoRadius;   
+    position: relative;
+}
+
+.bottomPartStyle {
+    width: $logoSizeSmall;
+    height: $logoSizeSmall/2;
+
+    top: $logoSizeSmall/2;
+    position: absolute;  
+
+    background-color: #9277FF;
+    border-bottom-right-radius: $logoRadius; 
+    border-top-left-radius: $logoRadius;
+}
+
+.logo {
+    z-index: 1;
+}
+
+@media (min-width: 420px) {
+    .logoWrapper {
+        width: $logoSizeMid;
+        height: $logoSizeMid;
+        border-top-right-radius: $logoRadius;
+        border-bottom-right-radius: $logoRadius;   
+    }
+
+    .bottomPartStyle {
+        width: $logoSizeMid;
+        height: $logoSizeMid/2;
+
+        top: $logoSizeMid/2;
+
+        border-bottom-right-radius: $logoRadius; 
+        border-top-left-radius: $logoRadius;
+    }
+
+    .logo {
+        transform: scale(1.45);
+    }
+}
+
+@media (min-width: 992px) {
+    .logoWrapper {
+        width: $logoSizeBig;
+        height: $logoSizeBig;
+        border-top-right-radius: $logoRadius;
+        border-bottom-right-radius: $logoRadius;   
+    }
+
+    .bottomPartStyle {
+        width: $logoSizeBig;
+        height: $logoSizeBig/2;
+
+        top: $logoSizeBig/2;
+
+        border-bottom-right-radius: $logoRadius; 
+        border-top-left-radius: $logoRadius;
+    }
+
+    .logo {
+        transform: scale(1.45);
+    }
+}

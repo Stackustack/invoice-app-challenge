@@ -1,0 +1,22 @@
+@use "../../../styles/mixins.scss" as m;
+
+.sidebarBox {
+    @include m.flex($justify: center, $align: center);
+    width: 72px;
+    height: 72px;
+}
+
+@media (min-width: 420px) {
+    .sidebarBox {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .sidebarBox {
+        width: 103px;
+        height: 103px;
+    }
+}
