@@ -18,5 +18,15 @@
     border-radius: 16px;
 }
 
+.addNewItemText::after {
+    content: 'New'
+}
+
+@media (min-width: 420px) {
+    .addNewItemText::after {
+        content: 'New Invoice'
+    }
+}
+
 
 

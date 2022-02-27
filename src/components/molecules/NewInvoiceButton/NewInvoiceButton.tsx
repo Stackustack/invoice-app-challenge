@@ -9,7 +9,7 @@ const NewInvoiceButton = () => {
       <div className={s.circle}>
         <PlusIcon />
       </div>
-      <h4>New Invoice</h4>
+      <h4 className={s.addNewItemText} />
     </Button>
   );
 };
