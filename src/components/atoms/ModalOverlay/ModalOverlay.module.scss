@@ -1,0 +1,15 @@
+.modalOverlay {
+    
+    display: flex;
+    flex-direction: column;
+    
+    position: fixed;
+    box-sizing: border-box;
+    width: 86%;
+    left: 7%;
+    z-index: 30;
+
+    border-radius: 8px;
+    padding: 32px;
+    background-color: white;
+}
