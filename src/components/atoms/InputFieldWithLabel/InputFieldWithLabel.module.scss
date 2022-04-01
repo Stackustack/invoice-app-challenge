@@ -1,0 +1,40 @@
+@use '../../../styles/mixins' as m;
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+
+    label {
+        @include m.font($size: 12px, $weight: 500, $height: 15px, $spacing: -0.25px);
+        color: #7E88C3;
+
+    }
+
+    input {
+        padding: 0; //reset
+        box-sizing: border-box;
+
+        @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+        color: #0C0E16;
+        appearance: none;
+        outline: none;
+        // border: 1px solid blue;
+        border: 1px solid #DFE3FA;
+        border-radius: 4px;
+        height: 48px;
+        padding-inline: 20px;
+        padding-top: 2px; 
+    }
+
+        &:focus-within {
+        label {
+            color: #EC5757;
+        }
+
+        input {
+            border: 1px solid #EC5757;
+        }
+    }
+}
