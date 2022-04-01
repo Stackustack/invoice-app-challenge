@@ -1,0 +1,23 @@
+@use '../../../../styles/mixins' as m;
+
+.formHeader {
+    padding: 24px;
+    // TODO: bottom shadow under the header
+    // problem: it should overlap inputFields and shouldn't affect clicking on goBack button
+
+    .goBack {
+        @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px;
+        border: none;
+        padding: 0; //reset
+        margin-bottom: 24px;
+        background-color: inherit;
+    }
+
+    .headerTitle {
+        @include m.font($size: 24px, $weight: 700, $height: 32px, $spacing: -0.5px);
+    }
+}

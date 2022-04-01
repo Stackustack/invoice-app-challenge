@@ -1,0 +1,21 @@
+@use '../../../styles/mixins' as m;
+
+.wrapper {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 64px - 91px);
+    top: 72px;
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    z-index: 30;
+}
+
+.form {
+    box-sizing: border-box;
+
+    padding: 24px;
+    height: 100%;
+    overflow-y: scroll;
+}

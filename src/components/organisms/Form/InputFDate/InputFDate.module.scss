@@ -1,0 +1,59 @@
+@use '../../../../styles/mixins' as m;
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+
+    label {
+        @include m.font($size: 12px, $weight: 500, $height: 15px, $spacing: -0.25px);
+    }
+
+    input {
+        padding: 0; //reset
+        box-sizing: border-box;
+
+        @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+        color: #0C0E16;
+        appearance: none;
+        outline: none;
+        border-radius: 4px;
+        height: 48px;
+        padding-inline: 20px;
+        padding-top: 2px; 
+    }
+    
+}
+
+.inputField--valid {
+    label {
+        color: #7E88C3;
+    }
+
+    input {
+        border: 1px solid #DFE3FA;
+    }
+
+    &:focus-within {
+        input {
+            border: 1px solid #9277FF;
+        }
+    }
+}
+
+.inputField--invalid {
+    label {
+        color: red;
+    }
+
+    input {
+        border: 1px solid red;
+    }
+}
+
+.actualInputFieldForDate {
+    width: 100%;
+    background: url(../../../../assets/icon-calendar.svg) no-repeat;
+    background-position: center right 16px;
+}

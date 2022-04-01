@@ -1,0 +1,182 @@
+@use '../../../styles/fonts.scss' as f;
+@use '../../../styles/mixins.scss' as m;
+
+
+
+.invoiceDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+    
+    //do wyrzucenia
+    gap: 10px;
+    padding: 10px;
+    // height: 100%;
+
+    color: #7E88C3;
+
+}
+
+.goBackWrapper {
+    display: flex;
+    gap: 12px;
+
+    .goBackIcon {
+        object-fit: contain;
+
+    }
+
+    .goBackText {
+        @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+        color: #0C0E16;
+    }
+}
+
+.invoiceDetailsStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.invoiceDetailsData {
+    display: grid;
+    row-gap: 10px;
+    grid-template-areas: 
+        "invoiceIdAndDescWrapper    invoiceIdAndDescWrapper"
+        "senderAddress              senderAddress"
+        "invoiceDate                billTo"
+        "paymentDue                 billTo"
+        "sentTo                     sentTo"
+        "itemListSummaryWrapper itemListSummaryWrapper";
+
+    background-color: white;
+}
+
+.invoiceIdAndDescWrapper{
+    grid-area: invoiceIdAndDescWrapper;
+    @include m.font($size: 12px, $weight: 400, $height: 15px, $spacing: -0.25px);
+
+    .invoiceId {
+        color: #0C0E16;
+        font-weight: 700;
+    }
+
+    .invoiceDesc {
+    }
+}
+
+.senderAddress{
+    grid-area: senderAddress;
+}
+
+.invoiceDate{
+    grid-area: invoiceDate;
+    margin-bottom: 22px;
+}
+
+.billTo{
+    grid-area: billTo;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paymentDue{
+    grid-area: paymentDue;
+}
+
+.sentTo{
+    grid-area: sentTo;
+    padding-bottom: 20px;
+}
+
+.itemListSummaryWrapper{
+    grid-area: itemListSummaryWrapper;
+
+    background-color: #F9FAFE;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 24px;
+
+    }
+
+    .li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .itemTitle {
+            @include m.font($size: 15px, $weight: 700, $height: 15px, $spacing: -0.25px);
+            color: #0C0E16;
+            padding-bottom: 8px;
+        }
+
+        .quantityXPrice {   
+            @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px); 
+        }
+
+        .itemTotal {
+            @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+            color: #0C0E16
+        }
+
+        &:first-child {
+            padding-top: 24px;
+        }
+
+        &:last-child {
+            padding-bottom: 24px;
+        }
+    }
+
+
+}
+
+.priceSummary {
+    @include m.font($size: 11px, $weight: 400, $height: 18px, $spacing: -0.23px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373B53;
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 24px;
+
+
+
+    .invoiceTotalValue {
+        @include m.font($size: 20px, $weight: 700, $height: 32px, $spacing: -0.42px);
+    }
+}
+
+
+.actionsPanel {
+    justify-self: end; //??
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bolded {
+    @include m.font($size: 15px, $weight: 700, $height: 20px, $spacing: -0.25px);
+    color: #0C0E16;
+}
+
+.boldedBig {
+    @include m.font($size: 15px, $weight: 700, $height: 20px, $spacing: -0.31px);
+    color: #0C0E16;
+}
+
+.label {
+    @include m.font($size: 12px, $weight: 400, $height: 20px, $spacing: -0.25px);
+}
+
+.addressWrapper {
+    @include m.font($size: 11px, $weight: 400, $height: 1.5, $spacing: -0.23px);
+}

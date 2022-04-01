@@ -1,16 +1,20 @@
 import s from "./App.module.scss";
-import InvoiceSimpleCard from "./components/molecules/InvoiceSimpleCard/InvoiceSimpleCard";
+import Sidebar from "./components/organisms/Sidebar/Sidebar";
+import Home from "./pages/Home/Home";
+import { Routes, Route } from "react-router-dom";
+import InvoiceDetailsPage from "./pages/Invoice/InvoiceDetailsPage";
+import ScrollToTop from "./components/atoms/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <div className={s.app}>
-      <InvoiceSimpleCard
-        id={"XM9141"}
-        clientName={"Michal Jung"}
-        paymentDue={"2021-08-19"}
-        invoiceTotal={2137}
-        status={"paid"}
-      />
+      <Sidebar />
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/invoice/:invoiceId" element={<InvoiceDetailsPage />} />
+        </Routes>
+      </ScrollToTop>
     </div>
   );
 }

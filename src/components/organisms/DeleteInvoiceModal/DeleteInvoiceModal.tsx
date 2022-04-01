@@ -5,19 +5,31 @@ import Modal from "../../molecules/Modal/Modal";
 import sButtons from "./../../atoms/Button/Button.module.scss";
 import s from "./DeleteInvoiceModal.module.scss";
 
-type Props = {};
+type Props = {
+  invoiceId: string | undefined;
+  onClickHide: () => void;
+  onClickDelete: () => void;
+};
 
-const DeleteInvoiceModal = (props: Props) => {
+const DeleteInvoiceModal = ({
+  invoiceId,
+  onClickHide,
+  onClickDelete,
+}: Props) => {
   return (
     <Modal>
       <h2 className={s.title}>Confirm Deletion</h2>
       <p className={s.desc}>
-        Are you sure you want to delete invoice #INVOICE_NUM_HERE? This action
-        cannot be undone.
+        Are you sure you want to delete invoice {invoiceId}? This action cannot
+        be undone.
       </p>
       <div className={s.actions}>
-        <Button className={sButtons.colorsGrey}>Cancel</Button>
-        <Button className={sButtons.colorsWarning}>Delete</Button>
+        <Button className={sButtons.colorsGrey} onClick={onClickHide}>
+          Cancel
+        </Button>
+        <Button className={sButtons.colorsWarning} onClick={onClickDelete}>
+          Delete
+        </Button>
       </div>
     </Modal>
   );

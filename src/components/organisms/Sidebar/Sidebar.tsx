@@ -3,7 +3,7 @@ import Logo from "../../atoms/Logo/Logo";
 
 import s from "./Sidebar.module.scss";
 import avatar from "../../../assets/image-avatar.jpg";
-import { ReactComponent as MoonIcon } from "../../../assets/icon-moon.svg";
+import moonIcon from "../../../assets/icon-moon.svg";
 import SidebarBox from "../../atoms/SidebarBox/SidebarBox";
 
 type Props = {};
@@ -13,7 +13,7 @@ const Sidebar = (props: Props) => {
     <div className={s.sidebar}>
       <Logo className={s.logo} />
       <SidebarBox>
-        <MoonIcon />
+        <img src={moonIcon} className={s.themeToggle} alt="Toggle theme" />
       </SidebarBox>
       <div className={s.divider} />
       <SidebarBox>

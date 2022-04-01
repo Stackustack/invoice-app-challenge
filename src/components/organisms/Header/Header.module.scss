@@ -1,0 +1,46 @@
+@use '../../../styles/fonts.scss' as f;
+@use '../../../styles/mixins.scss' as m;
+
+.header {
+    grid-template-columns: 1fr auto auto;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+        "title        filter newInvoiceButton"
+        "nrOfInvoices filter newInvoiceButton"; 
+    margin-inline: 24px; 
+    margin-bottom: 32px;
+}
+
+.title {
+    @include f.h2;
+    grid-area: title;
+
+    margin-bottom: 4px;
+}
+
+.nrOfInvoices {
+    @include f.body__typography;
+    grid-area: nrOfInvoices;
+}
+
+.filterWrapper {
+    grid-area: filter;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+
+.newInvoiceButton {
+    margin-left: 24px;
+    grid-area: newInvoiceButton;
+}
+
+@media (min-width: 420px) {
+    // TODO
+    // label:hover {
+    //     border: 2px solid #7C5DFA;
+    // }
+}

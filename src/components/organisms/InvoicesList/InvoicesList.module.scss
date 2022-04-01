@@ -1,0 +1,42 @@
+@use '../../../styles/fonts.scss' as f;
+
+.invoicesList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-inline: 24px; 
+    padding-bottom: 32px;
+}
+
+.noInvoicesWrapper {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.noInvoices__picture {
+
+}
+
+.noInvoices__header {
+    @include f.h2
+}
+
+.noInvoices__desc {
+    @include f.body__typography--small;
+    width: 50%;
+    color: #888EB0;
+}
+
+.bolded {
+    font-weight: 700;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

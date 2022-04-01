@@ -1,0 +1,7 @@
+@use '../../../../styles/mixins' as m;
+
+.sectionHeader {
+    @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+    color: #7C5DFA;
+    margin-bottom: 24px;
+}

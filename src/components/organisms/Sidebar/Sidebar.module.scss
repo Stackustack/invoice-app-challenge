@@ -3,6 +3,10 @@
 .sidebar {
     @include m.flex($direction: row, $align: center, $justify: center);
     background-color: #373B53;
+    margin-bottom: 32px;
+    position:sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -22,6 +26,11 @@
     border-radius: $mobileSize/2;
 }
 
+.themeToggle:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 @media (min-width: 992px) {
     
     .sidebar {
@@ -31,6 +40,7 @@
         width: $sidebardWidth;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
+        margin-bottom: 0;
     }
 
     .logo {
