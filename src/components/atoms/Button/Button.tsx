@@ -6,7 +6,7 @@ import s from "./Button.module.scss";
 type Props = {
   children: ReactNode;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e?) => void;
 };
 
 const Button = ({ children, className, onClick }: Props) => {
