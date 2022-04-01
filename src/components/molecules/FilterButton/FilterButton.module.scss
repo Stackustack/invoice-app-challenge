@@ -1,0 +1,15 @@
+@use '../../../styles/fonts.scss' as f;
+
+
+.filterButton {
+        @include f.h4;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        //base button override
+        min-width: 0;
+        padding: 0;
+}

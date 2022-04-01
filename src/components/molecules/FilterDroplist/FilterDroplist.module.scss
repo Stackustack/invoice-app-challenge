@@ -1,0 +1,24 @@
+@use '../../../styles/fonts.scss' as f;
+@use '../../../styles/mixins.scss' as m;
+
+.filterDroplist {
+    @include m.font($size: 12px, $weight: 700, $height: 15px, $spacing: -0.25px);
+
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+    position: absolute;
+    top: 60px;
+
+    width: 192px;
+    padding: 24px;
+    border-radius: 8px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.filterDroplist--visible {
+    display: flex;
+}

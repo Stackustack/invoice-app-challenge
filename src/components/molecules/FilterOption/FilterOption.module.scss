@@ -1,0 +1,46 @@
+.filterOption {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 16px;
+
+    text-transform: capitalize;
+}
+
+.filterOption + .filterOption {
+    margin-top: 16px;
+}
+
+.input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;  
+    font: inherit;
+    width: 16px;
+    height: 16px;
+    background-color: #DFE3FA;
+    border-radius: 2px;
+    transform: translateY(-2px);
+
+    display: grid;
+    place-content: center;
+
+    &::before {
+        content: '';
+        background: url(../../../assets/icon-check.svg) center no-repeat;
+
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+        transform: scale(0);
+        transition: 350ms transform ease-in-out;
+        background-color: #7C5DFA;
+    }
+
+    &:checked::before {
+        transform: scale(1);
+    }
+}
